@@ -2,11 +2,11 @@
 
 ### Install
 
-```npm install```
+> ```npm install```
 
 ### Minify
 
-```grunt```
+> ```grunt```
 
 Under the hood it will
 - include *fragment.sh* into *build/js1k.js*
@@ -16,7 +16,7 @@ Under the hood it will
 
 ### Run
 
-``` grunt serve```
+> ```grunt serve```
 
 ### Todo
 
