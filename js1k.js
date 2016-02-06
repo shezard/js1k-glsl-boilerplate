@@ -6,7 +6,7 @@ with (g) {
 
   for (p = crP(t=2); t; coS(S), (atS(p, S)  || console.log( getShaderInfoLog(S) ) )) {
       shS(S = crS(35634 - t), --t ?
-      include "fragment.sh"
+      'include "fragment.glsl"'
       : 'attribute vec4 p;void main(){gl_Position=p;}');
   }
   D=function(){requestAnimationFrame(D);drA(4,un1f(geUL(p,"T"),t+=.005),3)}
