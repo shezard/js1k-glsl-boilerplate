@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
       replace: {
         shader: {
-          src: 'fragment.glsl',
+          src: 'src/fragment.glsl',
           dest: 'build/fragment.glsl',
           replacements: [{
             from:  /(\r?\n|\r)/g,
@@ -16,15 +16,18 @@ module.exports = function(grunt) {
       includes: {
         options: {
           silent: true,
-          includeRegexp: /(\s*)include\s+"(\S+)"\s*/
+          includeRegexp: /(\s*)include\s+"(\S+)"\s*/,
+          includePath: '.'
         },
         shader: {
-          src: ['js1k.js'],
-          dest: 'build'
+          cwd: './src',
+          src: ['./js1k.js'],
+          dest: './build'
         },
         js: {
-          src: ['index.html'],
-          dest: 'build'
+          cwd: './src',
+          src: ['./index.html'],
+          dest: './build'
         }
       },
       uglify: {
