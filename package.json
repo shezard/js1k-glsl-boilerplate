@@ -1,0 +1,18 @@
+{
+  "name": "js1k",
+  "version": "0.0.0",
+  "description": "js1k entry",
+  "main": "js1k.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shezard",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.3",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-http-server": "0.0.4",
+    "grunt-includes": "^0.5.3",
+    "grunt-jscrush": "^0.1.0"
+  }
+}
