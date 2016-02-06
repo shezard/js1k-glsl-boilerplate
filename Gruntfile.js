@@ -3,6 +3,16 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
+      replace: {
+        shader: {
+          src: 'fragment.glsl',
+          dest: 'build/fragment.glsl',
+          replacements: [{
+            from:  /(\r?\n|\r)/g,
+            to: ''
+          }]
+        }
+      },
       includes: {
         options: {
           silent: true,
@@ -46,9 +56,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-jscrush');
+  grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-http-server');
 
-  grunt.registerTask('default', ['includes:shader', 'uglify', 'jscrush', 'includes:js']);
+  grunt.registerTask('default', ['replace', 'includes:shader', 'uglify', 'jscrush', 'includes:js']);
   grunt.registerTask('serve', ['http-server']);
 
 };
