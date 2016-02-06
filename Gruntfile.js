@@ -5,7 +5,8 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
       includes: {
         options: {
-          'debug': true
+          silent: true,
+          includeRegexp: /(\s*)include\s+"(\S+)"\s*/
         },
         shader: {
           src: ['js1k.js'],
