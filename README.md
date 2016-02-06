@@ -6,12 +6,12 @@
 
 ### Minify
 
-> ```grunt```
+> ``` grunt```
 
 Under the hood it will
 - include *fragment.sh* into *build/js1k.js*
 - minify *js1k.js* into *build/js1k.min.js*
-- run jscrush on *build/js1k.min.js*
+- run jscrush on *build/js1k.min.js* and output *build/js1k.crushed.js*
 - include *build/js1k.crushed.js* into *build/index.html*
 
 ### Run
