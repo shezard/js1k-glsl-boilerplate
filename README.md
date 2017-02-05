@@ -6,7 +6,7 @@
 
 ### Minify
 
-> grunt
+> npm start
 
 Under the hood it will
 - include *src/fragment.sh* into *build/js1k.js* (removing end of lines)
@@ -16,7 +16,7 @@ Under the hood it will
 
 ### Run
 
-> grunt serve
+> npm run serve
 
 ### Todo
 
